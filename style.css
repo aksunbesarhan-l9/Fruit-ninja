@@ -1,0 +1,68 @@
+    /* Жалпы стильдер */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: "Poppins", sans-serif;
+      background-color: #000; /* фон қара, бос орындар қара болып көрінеді */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Контейнер */
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 🔹 Фото экранға сыйып, пропорция сақталады */
+    .container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* cover → contain */
+      display: block;
+      background-color: #000; /* фон біркелкі */
+    }
+
+    /* "Старт" батырмасы */
+    .start-btn {
+      position: absolute;
+      left: 50%;
+      bottom: 8%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 209, 102, 0.95);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      transition: all 0.3s ease;
+      width: clamp(120px, 30vw, 220px);
+      height: clamp(45px, 10vw, 80px);
+    }
+
+    .start-btn:hover {
+      background-color: #ffb703;
+      transform: translateX(-50%) scale(1.07);
+    }
+
+    .start-btn a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: clamp(18px, 5vw, 32px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Телефондарға арналған түзету */
+    @media (max-width: 480px) {
+      .start-btn {
+        bottom: 10%;
+      }
+    }
